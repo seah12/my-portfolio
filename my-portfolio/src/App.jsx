@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import profilePic from './assets/profile.jpg'
+import resumePdf from './assets/Shaine-Nace-CV.pdf'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -77,7 +79,7 @@ function App() {
           {/* PROFILE PICTURE */}
           <div className="hero-image">
             <div className="profile-frame">
-              <img src="public/profile.jpg" alt="Portrait of Shaine Dando Nace" />
+             <img src={profilePic} alt="Portrait of Shaine Dando Nace" />
             </div>
 
             <p className="profile-caption">
@@ -240,10 +242,7 @@ function App() {
           </p>
 
           <a
-            href="public/Shaine-Nace-CV.pdf"
-            className="button"
-            download
-          >
+            href={resumePdf} className="button" download="Shaine-Nace-CV.pdf">
             Download My CV
           </a>
         </section>
